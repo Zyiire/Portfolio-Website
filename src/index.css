@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+/* Brand palette — soft-apricot / tangerine-dream / blush-rose / grape-soda / midnight-violet */
+@theme {
+  --color-apricot-50: #fdf2e8;
+  --color-apricot-100: #fbe6d0;
+  --color-apricot-200: #f6cca2;
+  --color-apricot-300: #f2b373;
+  --color-apricot-400: #ee9944;
+  --color-apricot-500: #e98016;
+  --color-apricot-600: #bb6611;
+  --color-apricot-700: #8c4c0d;
+  --color-apricot-800: #5d3309;
+  --color-apricot-900: #2f1a04;
+  --color-apricot-950: #211203;
+
+  --color-tangerine-50: #feede6;
+  --color-tangerine-100: #fedbcd;
+  --color-tangerine-200: #fcb79c;
+  --color-tangerine-300: #fb936a;
+  --color-tangerine-400: #fa6f38;
+  --color-tangerine-500: #f94b06;
+  --color-tangerine-600: #c73c05;
+  --color-tangerine-700: #952d04;
+  --color-tangerine-800: #631e03;
+  --color-tangerine-900: #320f01;
+  --color-tangerine-950: #230b01;
+
+  --color-blush-50: #faeaee;
+  --color-blush-100: #f5d6dd;
+  --color-blush-200: #ecacba;
+  --color-blush-300: #e28398;
+  --color-blush-400: #d85a75;
+  --color-blush-500: #cf3053;
+  --color-blush-600: #a52742;
+  --color-blush-700: #7c1d32;
+  --color-blush-800: #531321;
+  --color-blush-900: #290a11;
+  --color-blush-950: #1d070c;
+
+  --color-grape-50: #f9ecf7;
+  --color-grape-100: #f2d9ef;
+  --color-grape-200: #e6b3e0;
+  --color-grape-300: #d98cd0;
+  --color-grape-400: #cc66c0;
+  --color-grape-500: #bf40b0;
+  --color-grape-600: #99338d;
+  --color-grape-700: #73266a;
+  --color-grape-800: #4d1947;
+  --color-grape-900: #260d23;
+  --color-grape-950: #1b0919;
+
+  --color-midnight-50: #ede9fc;
+  --color-midnight-100: #dad3f8;
+  --color-midnight-200: #b5a6f2;
+  --color-midnight-300: #917aeb;
+  --color-midnight-400: #6c4ee4;
+  --color-midnight-500: #4721de;
+  --color-midnight-600: #391bb1;
+  --color-midnight-700: #2b1485;
+  --color-midnight-800: #1c0d59;
+  --color-midnight-900: #0e072c;
+  --color-midnight-950: #0a051f;
+}
+
+/* Match the page background on overscroll */
+body {
+  background-color: var(--color-apricot-50);
+}
+
+/* Kill CSS-driven motion (e.g. the marquee ticker) for users who opt out.
+   GSAP motion is gated separately via gsap.matchMedia in Portfolio.jsx. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
